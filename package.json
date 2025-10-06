@@ -1,0 +1,24 @@
+{
+  "name": "pdf-to-xlsm-converter",
+  "version": "1.0.0",
+  "description": "Conversor de PDF para XLSM com formatação profissional",
+  "main": "app.py",
+  "scripts": {
+    "dev": "python app.py",
+    "build": "echo 'Build completed'",
+    "start": "python app.py"
+  },
+  "keywords": [
+    "pdf",
+    "xlsm",
+    "converter",
+    "excel",
+    "flask"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
