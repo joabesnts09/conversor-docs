@@ -71,6 +71,7 @@ if not exist "%ROOT_DIR%\frontend\package.json" (
 
 echo.
 echo [5/6] Instalando dependencias Python...
+:: Usar CALL para garantir que o script de ativação do venv retorne
 call venv\Scripts\activate
 pip install -r "%ROOT_DIR%\%REQ_FILE%"
 if errorlevel 1 (
@@ -83,7 +84,8 @@ echo Dependencias Python instaladas!
 echo.
 echo [6/6] Instalando dependencias do frontend...
 cd "%ROOT_DIR%\frontend"
-npm install
+:: CORRIGIDO: Usar CALL para garantir que o script .bat continue após npm install
+call npm install
 if errorlevel 1 (
     echo ERRO: Falha ao instalar dependencias Node.js!
     pause
